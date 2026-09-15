@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnterpriseBuilder - Next-Gen Business Website Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/canvas.css">
+
+  <script src="js/jszip.min.js"></script>
+  <script src="js/sortable.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+  <div id="landing-showcase-view" class="landing-page-container">
+    <nav class="landing-nav">
+      <a href="#" class="landing-logo">
+        <div class="app-logo-badge"><i class="fa-solid fa-shapes"></i></div>
+        <span>EnterpriseBuilder</span>
+      </a>
+
+      <ul class="landing-nav-links">
+        <li><a href="#features" class="landing-nav-link">Features</a></li>
+        <li><a href="#templates" class="landing-nav-link">52+ Templates</a></li>
+        <li><a href="#pricing" class="landing-nav-link">Plans & Pricing</a></li>
+        <li><a href="#faq" class="landing-nav-link">FAQ</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <button type="button" class="btn-app btn-google-login" data-auth="google-login">
+          <svg class="google-svg-icon" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Sign In</span>
+        </button>
+        <button type="button" class="landing-btn-hero landing-btn-hero-primary" style="padding: 0.55rem 1.25rem; font-size: 0.9rem;" onclick="window.app && window.app.launchStudio()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Launch Studio
+        </button>
+      </div>
+    </nav>
+
+    <div class="landing-hero">
+      <div class="landing-orb landing-orb-1"></div>
+      <div class="landing-orb landing-orb-2"></div>
+
+      <div class="landing-pill-badge">
+        <i class="fa-solid fa-bolt" style="color: #f59e0b;"></i>
+        <span>Enterprise Website Studio 2.0 &bull; 52+ Templates &bull; Google 2-Step OTP Security</span>
+      </div>
+
+      <h1 class="landing-hero-title">
+        Build Hyper-Polished Business Websites with Zero Code
+      </h1>
+
+      <p class="landing-hero-sub">
+        Visual drag-and-drop canvas studio engineered for fast-moving founders, design agencies, and corporate teams. Packed with 52+ pre-built industry templates, 3-color cosmic gradients, and 100% white-label exports.
+      </p>
+
+      <div class="landing-cta-row">
+        <button type="button" class="landing-btn-hero landing-btn-hero-primary" onclick="window.app && window.app.launchStudio()">
+          <i class="fa-solid fa-rocket"></i> Launch Studio & Start Building
+        </button>
+        <a href="#templates" class="landing-btn-hero landing-btn-hero-secondary">
+          <i class="fa-solid fa-layer-group"></i> Explore 52+ Templates
+        </a>
+      </div>
+
+      <div class="landing-stats-grid">
+        <div class="landing-stat-card">
+          <div class="landing-stat-num">52+</div>
+          <div class="landing-stat-label">Pre-Built Industry Templates</div>
+        </div>
+        <div class="landing-stat-card">
+          <div class="landing-stat-num">100%</div>
+          <div class="landing-stat-label">White-Label Export (HTML/ZIP/PDF)</div>
+        </div>
+        <div class="landing-stat-card">
+          <div class="landing-stat-num">3-Color</div>
+          <div class="landing-stat-label">Cosmic Gradient Customizer</div>
+        </div>
+        <div class="landing-stat-card">
+          <div class="landing-stat-num">2-Step</div>
+          <div class="landing-stat-label">Google Account OTP Verification</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="features" class="landing-section">
+      <div class="landing-section-header">
+        <span class="landing-section-badge">Next-Generation Capabilities</span>
+        <h2 class="landing-section-title">Everything You Need to Build & Launch</h2>
+        <p class="landing-section-sub">A comprehensive suite of visual tools, responsive controls, and production-grade export features designed to make site building effortless.</p>
+      </div>
+
+      <div class="landing-features-grid">
+        <div class="landing-feature-card">
+          <div class="landing-feature-icon"><i class="fa-solid fa-cubes"></i></div>
+          <h3 class="landing-feature-title">Drag & Drop Canvas Studio</h3>
+          <p class="landing-feature-desc">Re-order, customize, and clone navigation, heroes, feature grids, pricing tables, team cards, and contact blocks in real time.</p>
+        </div>
+
+        <div class="landing-feature-card">
+          <div class="landing-feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3 class="landing-feature-title">3-Color Cosmic Gradients</h3>
+          <p class="landing-feature-desc">Design rich background meshes and multi-stop vibrant gradients with custom angles, radial stops, and instant presets.</p>
+        </div>
+
+        <div class="landing-feature-card">
+          <div class="landing-feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3 class="landing-feature-title">Multi-Device Live Preview</h3>
+          <p class="landing-feature-desc">Simulate desktop, tablet, and mobile views instantly in a realistic browser frame with real-time responsive rendering.</p>
+        </div>
+
+        <div class="landing-feature-card">
+          <div class="landing-feature-icon"><i class="fa-solid fa-file-export"></i></div>
+          <h3 class="landing-feature-title">Instant HTML, ZIP & PDF Export</h3>
+          <p class="landing-feature-desc">Export fully standalone production HTML with embedded styles, bundle complete ZIP archives, or print clean PDF brochures.</p>
+        </div>
+
+        <div class="landing-feature-card">
+          <div class="landing-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="landing-feature-title">Google 2-Step OTP Security</h3>
+          <p class="landing-feature-desc">Enterprise identity authentication with instant 6-digit verification codes, Chrome profile recognition, and role entitlements.</p>
+        </div>
+
+        <div class="landing-feature-card">
+          <div class="landing-feature-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <h3 class="landing-feature-title">Personnel Whitelist & Roles</h3>
+          <p class="landing-feature-desc">Manage verified team collaborators, domain access rules, and grant customized workspace permissions across plans.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="templates" class="landing-section" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="landing-section-header">
+        <span class="landing-section-badge">Curated Template Library</span>
+        <h2 class="landing-section-title">52+ Production-Grade Templates</h2>
+        <p class="landing-section-sub">Choose from carefully engineered company templates across tech, SaaS, corporate finance, healthcare, and creative agencies.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+        <div class="landing-feature-card" style="padding: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
+            <span style="background: #ede9fe; color: #6d28d9; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px;">FREE</span>
+            <span style="color: #64748b; font-size: 0.8rem;"><i class="fa-solid fa-cube"></i> 4 Sections</span>
+          </div>
+          <h3 style="color: #1e1b4b; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.4rem;">Apex Corporate Systems</h3>
+          <p style="color: #64748b; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.25rem;">Enterprise technology & digital transformation consultancy template with hero, stats, and solutions.</p>
+          <button type="button" class="btn-app btn-app-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;" onclick="window.app && window.app.launchStudio()">
+            <i class="fa-solid fa-arrow-right"></i> Open in Studio
+          </button>
+        </div>
+
+        <div class="landing-feature-card" style="padding: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
+            <span style="background: linear-gradient(135deg, #6d28d9, #ec4899); color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px;">PRO</span>
+            <span style="color: #64748b; font-size: 0.8rem;"><i class="fa-solid fa-cube"></i> 7 Sections</span>
+          </div>
+          <h3 style="color: #1e1b4b; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.4rem;">Nexus SaaS Platform</h3>
+          <p style="color: #64748b; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.25rem;">Modern high-conversion B2B cloud software landing with interactive pricing matrix and features.</p>
+          <button type="button" class="btn-app btn-app-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;" onclick="window.app && window.app.launchStudio()">
+            <i class="fa-solid fa-arrow-right"></i> Open in Studio
+          </button>
+        </div>
+
+        <div class="landing-feature-card" style="padding: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
+            <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px;">ENTERPRISE</span>
+            <span style="color: #64748b; font-size: 0.8rem;"><i class="fa-solid fa-cube"></i> Unlimited</span>
+          </div>
+          <h3 style="color: #1e1b4b; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.4rem;">Synthetix AI Research Labs</h3>
+          <p style="color: #64748b; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.25rem;">Ultra-modern deep-tech research showcase with cosmic gradient meshes, model benchmarking, and FAQ.</p>
+          <button type="button" class="btn-app btn-app-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;" onclick="window.app && window.app.launchStudio()">
+            <i class="fa-solid fa-arrow-right"></i> Open in Studio
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="landing-section" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="landing-section-header">
+        <span class="landing-section-badge">Clear & Scalable Plans</span>
+        <h2 class="landing-section-title">Choose the Plan That Fits Your Vision</h2>
+        <p class="landing-section-sub">From starter landing pages to full enterprise white-label production studios.</p>
+      </div>
+
+      <div class="landing-pricing-grid">
+        <div class="landing-plan-card">
+          <div class="landing-plan-name">Free Edition</div>
+          <div class="landing-plan-price">₹0 <span class="landing-plan-price-period">/ forever</span></div>
+          <div class="landing-plan-desc">For testing & basic single-page landing prototypes.</div>
+          <ul class="landing-plan-features">
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Up to 4 Sections per page</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> 5 Free Starter Templates</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Basic Block Components</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> 2-Color Gradient Picker</li>
+            <li class="landing-plan-feature-item disabled"><i class="fa-solid fa-xmark"></i> Website Export (HTML, ZIP, PDF)</li>
+            <li class="landing-plan-feature-item disabled"><i class="fa-solid fa-xmark"></i> Live Responsive Preview</li>
+            <li class="landing-plan-feature-item disabled"><i class="fa-solid fa-xmark"></i> 47+ Premium Pro Templates</li>
+          </ul>
+          <button type="button" class="btn-app btn-app-secondary" style="width: 100%; justify-content: center; padding: 0.85rem; font-weight: 700; border-radius: 10px;" onclick="window.app && window.app.launchStudio()">
+            Get Started Free
+          </button>
+        </div>
+
+        <div class="landing-plan-card featured">
+          <div class="landing-plan-badge">MOST POPULAR</div>
+          <div class="landing-plan-name">Pro Edition</div>
+          <div class="landing-plan-price">₹1,499 <span class="landing-plan-price-period">/ month</span></div>
+          <div class="landing-plan-desc">For professionals, founders & high-growth agencies.</div>
+          <ul class="landing-plan-features">
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> 15 Curated Standard Templates</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Up to 6 Sections per page</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Standard Single HTML Export</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Desktop & Tablet Live Preview</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Read-Only Clean Code Viewer</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> 2-Color Linear Gradients</li>
+            <li class="landing-plan-feature-item disabled"><i class="fa-solid fa-xmark"></i> Direct PDF & ZIP Package Export</li>
+          </ul>
+          <button type="button" class="btn-app btn-app-primary" style="width: 100%; justify-content: center; padding: 0.85rem; font-weight: 700; border-radius: 10px;" onclick="if(window.authManager && window.authManager.isLoggedIn()) { window.authManager.upgradePlan('pro'); } else { window.authManager.openGoogleLoginModal(); }">
+            Upgrade to Pro
+          </button>
+        </div>
+
+        <div class="landing-plan-card">
+          <div class="landing-plan-name">Enterprise Edition</div>
+          <div class="landing-plan-price">₹3,999 <span class="landing-plan-price-period">/ month</span></div>
+          <div class="landing-plan-desc">For large teams demanding white-label and priority infra.</div>
+          <ul class="landing-plan-features">
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Everything in Pro Edition</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> All 52+ Templates Unlocked</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Unlimited Sections per page</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> 100% White-Label Export (ZIP & PDF)</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> 3-Color Cosmic Gradients</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Team Personnel Whitelist Registry</li>
+            <li class="landing-plan-feature-item"><i class="fa-solid fa-check"></i> Priority 24/7 VIP Support</li>
+          </ul>
+          <button type="button" class="btn-app btn-app-primary" style="width: 100%; justify-content: center; padding: 0.85rem; font-weight: 700; border-radius: 10px; background: linear-gradient(135deg, #f59e0b, #d97706); border: none;" onclick="if(window.authManager && window.authManager.isLoggedIn()) { window.authManager.upgradePlan('enterprise'); } else { window.authManager.openGoogleLoginModal(); }">
+            Get Enterprise Access
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="landing-section" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="landing-section-header">
+        <span class="landing-section-badge">Got Questions?</span>
+        <h2 class="landing-section-title">Frequently Asked Questions</h2>
+        <p class="landing-section-sub">Find clear answers to common questions about EnterpriseBuilder Studio.</p>
+      </div>
+
+      <div class="landing-faq-accordion">
+        <div class="landing-faq-item active">
+          <button type="button" class="landing-faq-question" onclick="window.app && window.app.toggleLandingFaq(this)">
+            <span>How does Google 2-Step OTP Authentication work?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="landing-faq-answer">
+            When you sign in with your Google account, EnterpriseBuilder generates a secure 6-digit OTP code to verify your identity. Validating the code unlocks instant access to your builder studio, saved templates, and entitlements.
+          </div>
+        </div>
+
+        <div class="landing-faq-item">
+          <button type="button" class="landing-faq-question" onclick="window.app && window.app.toggleLandingFaq(this)">
+            <span>What happens when I export my website?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="landing-faq-answer">
+            Exporting delivers fully self-contained, valid HTML, structured ZIP archives, or downloadable PDFs. All CSS, typography, and responsive styles are bundled so you can host your site anywhere (Netlify, Vercel, Apache, Nginx, or AWS S3).
+          </div>
+        </div>
+
+        <div class="landing-faq-item">
+          <button type="button" class="landing-faq-question" onclick="window.app && window.app.toggleLandingFaq(this)">
+            <span>Can I customize 3-color gradients and colors?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="landing-faq-answer">
+            Yes! Pro and Enterprise plans allow multi-stop 3-color gradient customization, radial angles, and text color palettes directly inside the Section Inspector.
+          </div>
+        </div>
+
+        <div class="landing-faq-item">
+          <button type="button" class="landing-faq-question" onclick="window.app && window.app.toggleLandingFaq(this)">
+            <span>What are the differences between Pro and Enterprise?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="landing-faq-answer">
+            Pro gives you 25 templates, up to 8 sections, standard exports, and live preview. Enterprise provides unlimited sections, all 52+ templates, 100% white-label exports with zero branding watermarks, and team personnel whitelist management.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="landing-footer">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div class="app-logo-badge" style="width: 30px; height: 30px; font-size: 0.9rem;"><i class="fa-solid fa-shapes"></i></div>
+          <span style="font-weight: 800; color: #ffffff;">EnterpriseBuilder</span>
+          <span style="color: #64748b; font-size: 0.8rem;">&copy; 2026. All rights reserved.</span>
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
+          <a href="#features" style="color: #94a3b8; text-decoration: none;">Features</a>
+          <a href="#templates" style="color: #94a3b8; text-decoration: none;">Templates</a>
+          <a href="#pricing" style="color: #94a3b8; text-decoration: none;">Pricing</a>
+          <a href="#" style="color: #94a3b8; text-decoration: none;" onclick="window.app && window.app.launchStudio()">Launch Studio</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="app-studio-view" style="display: none; flex-direction: column; height: 100vh; width: 100%;">
+    <header class="app-header">
+      <div class="brand-wrapper">
+        <a href="#" class="app-logo" onclick="window.app && window.app.showView('landing')">
+          <div class="app-logo-badge"><i class="fa-solid fa-shapes"></i></div>
+          <span>EnterpriseBuilder</span>
+        </a>
+        <span class="app-version-tag">PRO</span>
+      </div>
+
+      <div class="device-switcher">
+        <button class="device-btn active" data-device="desktop"><i class="fa-solid fa-desktop"></i> Desktop</button>
+        <button class="device-btn" data-device="tablet"><i class="fa-solid fa-tablet-screen-button"></i> Tablet</button>
+        <button class="device-btn" data-device="mobile"><i class="fa-solid fa-mobile-screen-button"></i> Mobile</button>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn-app btn-app-secondary" title="View Landing Showcase" onclick="window.app && window.app.showView('landing')">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+
+        <button class="btn-icon" title="Undo" onclick="window.app && window.app.undo()"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class="btn-icon" title="Redo" onclick="window.app && window.app.redo()"><i class="fa-solid fa-rotate-right"></i></button>
+        
+        <button class="btn-app btn-app-secondary" title="Auto-arrange sections into standard flow" onclick="window.editor && window.editor.autoArrangeSections()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Arrange
+        </button>
+
+        <button class="btn-app btn-app-secondary" data-open-modal="templates-modal">
+          <i class="fa-solid fa-layer-group"></i> Templates
+        </button>
+
+        <button class="btn-app btn-app-secondary" data-open-modal="theme-modal">
+          <i class="fa-solid fa-palette"></i> Brand Theme
+        </button>
+
+        <button class="btn-app btn-app-secondary" data-open-modal="preview-modal">
+          <i class="fa-solid fa-eye"></i> Preview
+        </button>
+
+        <button class="btn-app btn-app-secondary" data-open-modal="code-modal">
+          <i class="fa-solid fa-code"></i> View Code
+        </button>
+
+        <button class="btn-app btn-app-secondary" title="Export website directly to PDF" onclick="window.exporter && window.exporter.exportToPDF()">
+          <i class="fa-solid fa-file-pdf"></i> Export PDF
+        </button>
+
+        <button class="btn-app btn-app-success" onclick="window.exporter && window.exporter.downloadZIP()">
+          <i class="fa-solid fa-download"></i> Export Website
+        </button>
+
+        <div id="header-auth-container" style="display: flex; align-items: center; gap: 0.5rem; margin-left: 0.25rem;"></div>
+      </div>
+    </header>
+
+    <div class="app-main">
+      <aside class="app-sidebar">
+        <div class="sidebar-tabs">
+          <button class="sidebar-tab-btn active" id="tab-btn-sections" onclick="window.app && window.app.switchSidebarTab('sections')"><i class="fa-solid fa-cubes"></i> Sections</button>
+          <button class="sidebar-tab-btn" id="tab-btn-elements" onclick="window.app && window.app.switchSidebarTab('elements')"><i class="fa-solid fa-plus"></i> Add Elements</button>
+        </div>
+
+        <div class="sidebar-content" id="block-library-content">
+        </div>
+
+        <div class="sidebar-content" id="elements-library-content" style="display: none;">
+        </div>
+      </aside>
+
+      <main class="app-canvas-container">
+        <div class="canvas-frame" id="canvas-frame">
+          <div id="canvas-content">
+          </div>
+        </div>
+      </main>
+
+      <aside class="app-inspector">
+        <div class="inspector-header">
+          <div style="display: flex; flex-direction: column; gap: 2px; overflow: hidden;">
+            <span><i class="fa-solid fa-sliders"></i> Section Inspector</span>
+            <span id="inspector-selected-name" style="font-size: 0.78rem; font-weight: 500; color: var(--text-muted);">Select a section to customize</span>
+          </div>
+          <button id="btn-reset-section-style" class="btn-icon" style="width: 30px; height: 30px; font-size: 0.8rem;" title="Reset all section styles to default" onclick="window.editor && window.editor.resetSelectedSectionStyle()">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+          </button>
+        </div>
+
+        <div class="inspector-content">
+          <div class="inspector-group">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+              <label class="inspector-label" style="margin-bottom: 0;">Section Background</label>
+              <button type="button" id="btn-reset-bg" class="btn-reset-text" title="Reset background to default" onclick="window.editor && window.editor.resetSelectedSectionBackground()">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+              </button>
+            </div>
+            
+            <div class="inspector-segmented-control">
+              <button type="button" class="segment-btn active" data-bg-mode="default" onclick="window.editor && window.editor.setBackgroundMode('default')">Default</button>
+              <button type="button" class="segment-btn" data-bg-mode="color" onclick="window.editor && window.editor.setBackgroundMode('color')">Solid Color</button>
+              <button type="button" class="segment-btn" data-bg-mode="gradient" onclick="window.editor && window.editor.setBackgroundMode('gradient')">Gradient</button>
+            </div>
+
+            <div id="group-solid-color" style="display: none; margin-top: 0.85rem;">
+              <div class="color-picker-row">
+                <input type="color" id="inspector-sec-bg" class="color-thumb" value="#ffffff">
+                <input type="text" id="inspector-sec-bg-hex" class="inspector-input hex-input" value="#ffffff" placeholder="#ffffff">
+              </div>
+              <div class="color-swatches">
+                <button type="button" class="color-swatch" style="background: #ffffff;" title="Pure White" onclick="window.editor && window.editor.setSolidColor('#ffffff')"></button>
+                <button type="button" class="color-swatch" style="background: #f8fafc;" title="Light Slate" onclick="window.editor && window.editor.setSolidColor('#f8fafc')"></button>
+                <button type="button" class="color-swatch" style="background: #f3f0ff;" title="Light Purple" onclick="window.editor && window.editor.setSolidColor('#f3f0ff')"></button>
+                <button type="button" class="color-swatch" style="background: #e0f2fe;" title="Light Sky" onclick="window.editor && window.editor.setSolidColor('#e0f2fe')"></button>
+                <button type="button" class="color-swatch" style="background: #2563eb;" title="Royal Blue" onclick="window.editor && window.editor.setSolidColor('#2563eb')"></button>
+                <button type="button" class="color-swatch" style="background: #6d28d9;" title="Deep Violet" onclick="window.editor && window.editor.setSolidColor('#6d28d9')"></button>
+                <button type="button" class="color-swatch" style="background: #0f172a;" title="Slate Navy" onclick="window.editor && window.editor.setSolidColor('#0f172a')"></button>
+                <button type="button" class="color-swatch" style="background: #18181b;" title="Zinc Dark" onclick="window.editor && window.editor.setSolidColor('#18181b')"></button>
+              </div>
+            </div>
+
+            <div id="group-gradient" style="display: none; margin-top: 0.85rem;">
+              <div style="display: flex; gap: 0.4rem; margin-bottom: 0.75rem;">
+                <button type="button" class="segment-btn active" id="grad-mode-2color" style="padding: 4px;" onclick="window.editor && window.editor.setGradientStopsCount(2)">2 Colors</button>
+                <button type="button" class="segment-btn" id="grad-mode-3color" style="padding: 4px;" onclick="window.editor && window.editor.setGradientStopsCount(3)">3 Colors</button>
+              </div>
+
+              <div style="display: flex; gap: 0.4rem; margin-bottom: 0.75rem;">
+                <div style="flex: 1;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 4px; font-weight: 600;">Color 1</span>
+                  <div class="color-picker-row">
+                    <input type="color" id="inspector-grad-color1" class="color-thumb" value="#6d28d9">
+                    <input type="text" id="inspector-grad-hex1" class="inspector-input hex-input" value="#6d28d9">
+                  </div>
+                </div>
+                <div style="flex: 1;" id="col-grad-color3-wrap" style="display: none;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 4px; font-weight: 600;">Color 2 (Mid)</span>
+                  <div class="color-picker-row">
+                    <input type="color" id="inspector-grad-color3" class="color-thumb" value="#ec4899">
+                    <input type="text" id="inspector-grad-hex3" class="inspector-input hex-input" value="#ec4899">
+                  </div>
+                </div>
+                <div style="flex: 1;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 4px; font-weight: 600;" id="label-grad-color2">Color 2</span>
+                  <div class="color-picker-row">
+                    <input type="color" id="inspector-grad-color2" class="color-thumb" value="#00cfff">
+                    <input type="text" id="inspector-grad-hex2" class="inspector-input hex-input" value="#00cfff">
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 0.75rem;">
+                <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 4px; font-weight: 600;">Direction / Angle</span>
+                <select id="inspector-grad-angle" class="inspector-select">
+                  <option value="135deg">135° (Diagonal Bottom-Right)</option>
+                  <option value="90deg">90° (Left to Right)</option>
+                  <option value="180deg">180° (Top to Bottom)</option>
+                  <option value="45deg">45° (Diagonal Top-Right)</option>
+                  <option value="circle">Radial (Center Out)</option>
+                </select>
+              </div>
+
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 6px; font-weight: 600;">Gradient Presets</span>
+              <div class="gradient-presets-grid">
+                <button type="button" class="gradient-preset-chip" style="background: linear-gradient(135deg, #6d28d9, #ec4899, #00cfff);" title="Cosmic Tri-Color" onclick="window.editor && window.editor.setGradientPreset('#6d28d9', '#00cfff', '135deg', '#ec4899')">Cosmic Tri</button>
+                <button type="button" class="gradient-preset-chip" style="background: linear-gradient(135deg, #2563eb, #7c3aed, #06b6d4);" title="Cyber Tech" onclick="window.editor && window.editor.setGradientPreset('#2563eb', '#06b6d4', '135deg', '#7c3aed')">Cyber Tech</button>
+                <button type="button" class="gradient-preset-chip" style="background: linear-gradient(135deg, #f43f5e, #f59e0b, #10b981);" title="Sunset Tropical" onclick="window.editor && window.editor.setGradientPreset('#f43f5e', '#10b981', '135deg', '#f59e0b')">Sunset Wave</button>
+                <button type="button" class="gradient-preset-chip" style="background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);" title="Deep Galaxy" onclick="window.editor && window.editor.setGradientPreset('#0f172a', '#312e81', '135deg', '#1e1b4b')">Deep Galaxy</button>
+                <button type="button" class="gradient-preset-chip" style="background: linear-gradient(135deg, #6d28d9, #00cfff);" title="Violet Aurora" onclick="window.editor && window.editor.setGradientPreset('#6d28d9', '#00cfff', '135deg', '')">Violet Aurora</button>
+                <button type="button" class="gradient-preset-chip" style="background: linear-gradient(135deg, #0f766e, #10b981);" title="Emerald Lush" onclick="window.editor && window.editor.setGradientPreset('#0f766e', '#10b981', '135deg', '')">Emerald Lush</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="inspector-group">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+              <label class="inspector-label" style="margin-bottom: 0;">Section Text Color</label>
+              <button type="button" id="btn-reset-text-color" class="btn-reset-text" title="Reset text color to default" onclick="window.editor && window.editor.resetSelectedSectionTextColor()">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+              </button>
+            </div>
+            <div class="color-picker-row">
+              <input type="color" id="inspector-sec-text-color" class="color-thumb" value="#23124f">
+              <input type="text" id="inspector-sec-text-hex" class="inspector-input hex-input" value="#23124f" placeholder="#23124f">
+            </div>
+            <div class="color-swatches">
+              <button type="button" class="color-swatch" style="background: #ffffff;" title="White Text" onclick="window.editor && window.editor.setTextColor('#ffffff')"></button>
+              <button type="button" class="color-swatch" style="background: #f1f5f9;" title="Light Slate" onclick="window.editor && window.editor.setTextColor('#f1f5f9')"></button>
+              <button type="button" class="color-swatch" style="background: #23124f;" title="Dark Purple" onclick="window.editor && window.editor.setTextColor('#23124f')"></button>
+              <button type="button" class="color-swatch" style="background: #0f172a;" title="Slate Black" onclick="window.editor && window.editor.setTextColor('#0f172a')"></button>
+              <button type="button" class="color-swatch" style="background: #2563eb;" title="Royal Blue" onclick="window.editor && window.editor.setTextColor('#2563eb')"></button>
+              <button type="button" class="color-swatch" style="background: #6d28d9;" title="Violet" onclick="window.editor && window.editor.setTextColor('#6d28d9')"></button>
+              <button type="button" class="color-swatch" style="background: #059669;" title="Emerald" onclick="window.editor && window.editor.setTextColor('#059669')"></button>
+              <button type="button" class="color-swatch" style="background: #dc2626;" title="Crimson" onclick="window.editor && window.editor.setTextColor('#dc2626')"></button>
+            </div>
+          </div>
+
+          <div class="inspector-group">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+              <label class="inspector-label" style="margin-bottom: 0;">Vertical Padding (rem)</label>
+              <button type="button" class="btn-reset-text" title="Reset padding to default" onclick="window.editor && window.editor.resetSelectedSectionPadding()">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+              </button>
+            </div>
+            <input type="number" id="inspector-sec-padding" class="inspector-input" min="1" max="15" step="0.5" value="3.5" placeholder="3.5">
+          </div>
+
+          <div class="inspector-group">
+            <label class="inspector-label">Quick Actions</label>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <button class="btn-app btn-app-secondary" style="width: 100%; justify-content: center;" onclick="window.editor && window.editor.autoArrangeSections()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Arrange Page
+              </button>
+              <button class="btn-app btn-app-secondary" style="width: 100%; justify-content: center;" onclick="window.exporter && window.exporter.exportToPDF()">
+                <i class="fa-solid fa-file-pdf"></i> Export Website as PDF
+              </button>
+              <button class="btn-app btn-app-secondary" style="width: 100%; justify-content: center;" onclick="window.exporter && window.exporter.downloadHTML()">
+                <i class="fa-solid fa-file-code"></i> Download index.html
+              </button>
+              <button class="btn-app btn-app-secondary" style="width: 100%; justify-content: center; color: #dc2626; border-color: rgba(220, 38, 38, 0.3);" onclick="if(confirm('Clear entire canvas?')) { if (window.editor) { window.editor.sections = []; window.editor.render(); window.app.saveState(); } }">
+                <i class="fa-solid fa-trash"></i> Clear Canvas
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="templates-modal">
+    <div class="modal-box" style="max-width: 960px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <h3 class="modal-title"><i class="fa-solid fa-briefcase"></i> Pre-Built Company Templates</h3>
+          <span style="background: #ede9fe; color: var(--abi-dark-blue); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;" id="template-count-badge">52 Templates</span>
+        </div>
+        <button class="modal-close-btn" onclick="window.app && window.app.closeModal('templates-modal')">&times;</button>
+      </div>
+      <div style="padding: 1rem 1.5rem 0.5rem; border-bottom: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 0.75rem; background: #ffffff;">
+        <div style="position: relative;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+          <input type="text" id="template-search-input" class="inspector-input" placeholder="Search 50+ templates by industry, name, or keyword..." style="padding-left: 2.4rem;" oninput="window.app && window.app.filterTemplates()">
+        </div>
+        <div id="template-category-chips" style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 4px;">
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="template-grid" id="template-cards-grid">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-app btn-app-secondary" onclick="window.app && window.app.closeModal('templates-modal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="theme-modal">
+    <div class="modal-box" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fa-solid fa-palette"></i> Brand Styling & Colors</h3>
+        <button class="modal-close-btn" onclick="window.app && window.app.closeModal('theme-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="inspector-group">
+          <label class="inspector-label">Primary Brand Color</label>
+          <div class="color-picker-row">
+            <input type="color" id="theme-primary-picker" class="color-thumb" value="#6d28d9">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Buttons, badges, highlights</span>
+          </div>
+        </div>
+
+        <div class="inspector-group">
+          <label class="inspector-label">Secondary Accent Color</label>
+          <div class="color-picker-row">
+            <input type="color" id="theme-accent-picker" class="color-thumb" value="#00cfff">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Gradients and icons</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-app btn-app-primary" onclick="window.app && window.app.closeModal('theme-modal')">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="preview-modal">
+    <div class="modal-box" style="max-width: 95vw; width: 1200px; height: 92vh; max-height: 92vh;">
+      <div class="modal-header" style="padding: 0.85rem 1.25rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <h3 class="modal-title" style="font-size: 1.05rem;"><i class="fa-solid fa-eye"></i> Live Website Preview</h3>
+          <div class="device-switcher" style="margin-bottom: 0;">
+            <button type="button" class="device-btn active" id="preview-device-desktop" onclick="window.app && window.app.setModalPreviewDevice('desktop')"><i class="fa-solid fa-desktop"></i> Desktop</button>
+            <button type="button" class="device-btn" id="preview-device-tablet" onclick="window.app && window.app.setModalPreviewDevice('tablet')"><i class="fa-solid fa-tablet-screen-button"></i> Tablet</button>
+            <button type="button" class="device-btn" id="preview-device-mobile" onclick="window.app && window.app.setModalPreviewDevice('mobile')"><i class="fa-solid fa-mobile-screen-button"></i> Mobile</button>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <button type="button" class="btn-app btn-app-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.82rem;" title="Open live preview in new browser tab" onclick="window.app && window.app.openPreviewInNewTab()">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+          </button>
+          <button class="modal-close-btn" onclick="window.app && window.app.closeModal('preview-modal')">&times;</button>
+        </div>
+      </div>
+      <div class="browser-address-bar" style="background: #f1f5f9; padding: 0.5rem 1.25rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.75rem;">
+        <div style="display: flex; gap: 6px;">
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #f59e0b; display: inline-block;"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+        </div>
+        <div style="display: flex; gap: 4px; color: var(--text-muted); font-size: 0.85rem;">
+          <button type="button" style="background: none; border: none; color: inherit; cursor: pointer; padding: 2px;" title="Back" onclick="const f = document.getElementById('live-preview-iframe'); if (f && f.contentWindow) f.contentWindow.history.back();"><i class="fa-solid fa-arrow-left"></i></button>
+          <button type="button" style="background: none; border: none; color: inherit; cursor: pointer; padding: 2px;" title="Forward" onclick="const f = document.getElementById('live-preview-iframe'); if (f && f.contentWindow) f.contentWindow.history.forward();"><i class="fa-solid fa-arrow-right"></i></button>
+          <button type="button" style="background: none; border: none; color: inherit; cursor: pointer; padding: 2px;" title="Refresh" onclick="window.app && window.app.updateLivePreviewModal()"><i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+        <div style="flex: 1; display: flex; align-items: center; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 20px; padding: 0.3rem 0.85rem; gap: 0.5rem; font-size: 0.82rem; color: #475569; font-family: monospace; overflow: hidden; white-space: nowrap;">
+          <i class="fa-solid fa-lock" style="color: #10b981; font-size: 0.75rem;"></i>
+          <span style="color: #64748b;">https://</span>
+          <span id="preview-dummy-url" style="color: #1e293b; font-weight: 600;">apexcorp-preview.live/home</span>
+        </div>
+        <button type="button" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.9rem;" title="Copy Preview URL" onclick="navigator.clipboard.writeText('https://apexcorp-preview.live/home'); window.app && window.app.showToast('Copied preview URL!');"><i class="fa-regular fa-copy"></i></button>
+      </div>
+      <div class="modal-body" style="padding: 1rem; background: #e2e8f0; display: flex; justify-content: center; align-items: center; overflow: hidden; height: 100%;">
+        <div id="preview-frame-container" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; transition: all 0.25s ease;">
+          <iframe id="live-preview-iframe" style="width: 100%; height: 100%; border: 1px solid var(--border-color); border-radius: 8px; background: #ffffff; box-shadow: 0 10px 25px rgba(35, 18, 79, 0.15); transition: width 0.25s ease;"></iframe>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-size: 0.85rem; color: var(--text-muted);">
+          <i class="fa-solid fa-circle-info"></i> Full standalone HTML with all styles and scripts ready.
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn-app btn-app-secondary" onclick="window.exporter && window.exporter.exportToPDF()">
+            <i class="fa-solid fa-file-pdf"></i> Export PDF
+          </button>
+          <button class="btn-app btn-app-secondary" onclick="window.exporter && window.exporter.downloadHTML()">
+            <i class="fa-solid fa-file-code"></i> Download HTML
+          </button>
+          <button class="btn-app btn-app-success" onclick="window.exporter && window.exporter.downloadZIP()">
+            <i class="fa-solid fa-download"></i> Download ZIP
+          </button>
+          <button class="btn-app btn-app-primary" onclick="window.app && window.app.closeModal('preview-modal')">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="code-modal">
+    <div class="modal-box" style="max-width: 800px;">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fa-solid fa-code"></i> Generated Clean HTML</h3>
+        <button class="modal-close-btn" onclick="window.app && window.app.closeModal('code-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <textarea id="code-preview-area" style="width: 100%; height: 420px; background: #faf5ff; color: #23124f; font-family: monospace; font-size: 0.85rem; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; outline: none;" readonly></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-app btn-app-secondary" onclick="navigator.clipboard.writeText(document.getElementById('code-preview-area').value); window.app && window.app.showToast('Copied HTML to clipboard!');">
+          <i class="fa-solid fa-copy"></i> Copy HTML
+        </button>
+        <button class="btn-app btn-app-primary" onclick="window.app && window.app.closeModal('code-modal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="icon-modal">
+    <div class="modal-box" style="max-width: 720px;">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fa-solid fa-icons"></i> Choose or Change Icon</h3>
+        <button class="modal-close-btn" onclick="window.app && window.app.closeModal('icon-modal')">&times;</button>
+      </div>
+      <div style="padding: 1rem 1.5rem 0.5rem; border-bottom: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 0.75rem;">
+        <div style="position: relative;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+          <input type="text" id="icon-search-input" class="inspector-input" placeholder="Search 100+ FontAwesome icons (e.g. bolt, cloud, shield, check, star, phone, user)..." style="padding-left: 2.4rem;" oninput="window.app && window.app.filterIcons()">
+        </div>
+        <div id="icon-category-chips" style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 4px;">
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="icon-picker-grid" id="icon-picker-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); gap: 8px; max-height: 380px; overflow-y: auto; padding: 0.5rem 0;">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-app btn-app-secondary" onclick="window.app && window.app.closeModal('icon-modal')">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <div id="wb-text-format-toolbar" class="wb-text-format-toolbar" style="display: none;">
+    <button type="button" class="wb-format-btn" data-command="bold" title="Bold"><i class="fa-solid fa-bold"></i></button>
+    <button type="button" class="wb-format-btn" data-command="italic" title="Italic"><i class="fa-solid fa-italic"></i></button>
+    <button type="button" class="wb-format-btn" data-command="underline" title="Underline"><i class="fa-solid fa-underline"></i></button>
+    <button type="button" class="wb-format-btn" data-command="strikeThrough" title="Strikethrough"><i class="fa-solid fa-strikethrough"></i></button>
+    <div class="wb-format-divider"></div>
+    <div class="wb-format-color-btn-wrap" title="Change Color of Selected Text">
+      <i class="fa-solid fa-font" style="font-size: 0.85rem;"></i>
+      <span class="wb-format-color-indicator" id="wb-selected-color-bar" style="background-color: #2563eb;"></span>
+      <input type="color" id="wb-floating-text-color-picker" class="wb-inline-color-input" value="#2563eb" title="Pick text color">
+    </div>
+    <div class="wb-format-swatches">
+      <button type="button" class="wb-format-swatch" style="background:#ffffff;" data-color="#ffffff" title="White"></button>
+      <button type="button" class="wb-format-swatch" style="background:#2563eb;" data-color="#2563eb" title="Royal Blue"></button>
+      <button type="button" class="wb-format-swatch" style="background:#6d28d9;" data-color="#6d28d9" title="Purple"></button>
+      <button type="button" class="wb-format-swatch" style="background:#ec4899;" data-color="#ec4899" title="Pink"></button>
+      <button type="button" class="wb-format-swatch" style="background:#dc2626;" data-color="#dc2626" title="Red"></button>
+      <button type="button" class="wb-format-swatch" style="background:#f59e0b;" data-color="#f59e0b" title="Amber"></button>
+      <button type="button" class="wb-format-swatch" style="background:#10b981;" data-color="#10b981" title="Emerald"></button>
+      <button type="button" class="wb-format-swatch" style="background:#0f172a;" data-color="#0f172a" title="Dark Slate"></button>
+    </div>
+    <div class="wb-format-divider"></div>
+    <button type="button" class="wb-format-btn" data-command="removeFormat" title="Clear Formatting"><i class="fa-solid fa-eraser"></i></button>
+  </div>
+
+  <div class="modal-overlay" id="google-login-modal">
+    <div class="modal-box" id="google-login-modal-box" style="max-width: 480px; border-radius: 16px;">
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="upgrade-modal">
+    <div class="modal-box" id="upgrade-modal-box" style="max-width: 980px; padding: 0; overflow: hidden; border-radius: 16px;">
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="payment-modal">
+    <div class="modal-box" id="payment-modal-box" style="max-width: 580px; padding: 0; overflow: hidden; border-radius: 16px;">
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="account-modal">
+    <div class="modal-box" id="account-modal-box" style="max-width: 520px; border-radius: 16px;">
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="whitelist-modal">
+    <div class="modal-box" id="whitelist-modal-box" style="max-width: 680px; border-radius: 16px;">
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/blocks.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/exporter.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
