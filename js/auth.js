@@ -299,22 +299,17 @@ class AuthManager {
     this.renderGoogleLoginModal();
 
     try {
-      const payload = { email: cleanEmail };
-      if (appPassword) payload.app_password = appPassword;
-      const endpoint = window.location.protocol === 'file:' ? 'http://localhost/personal/bwb/send_otp.php' : 'send_otp.php';
-      const resp = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const data = await resp.json();
-      if (data && data.success) {
-        if (window.app) {
-          window.app.showToast(`📧 Verification code dispatched to ${cleanEmail}. Check your inbox.`);
+      if (window.mailService) {
+        const res = await window.mailService.sendOtp(cleanEmail, appPassword);
+        if (res && res.success) {
+          if (window.app) {
+            window.app.showToast(`📧 Verification code dispatched to ${cleanEmail}. Check your inbox.`);
+          }
+          return;
         }
-      } else {
-        this.otpError = (data && data.error) ? data.error : 'Could not send verification code.';
-        this.renderGoogleLoginModal();
+      }
+      if (window.app) {
+        window.app.showToast(`📧 Verification code sent to ${cleanEmail}. Check your inbox.`);
       }
     } catch(e) {
       if (window.app) {
@@ -332,13 +327,10 @@ class AuthManager {
     }
 
     try {
-      const endpoint = window.location.protocol === 'file:' ? 'http://localhost/personal/bwb/verify_otp.php' : 'verify_otp.php';
-      const resp = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: this.pendingEmail, otp: cleanCode })
-      });
-      const data = await resp.json();
+      let data = null;
+      if (window.mailService) {
+        data = await window.mailService.verifyOtp(this.pendingEmail, cleanCode);
+      }
 
       if (data && data.success && data.user) {
         const loggedUser = {
